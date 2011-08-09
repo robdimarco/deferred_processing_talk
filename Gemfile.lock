@@ -48,6 +48,7 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     fastercsv (1.5.4)
+    gravatar_image_tag (1.0.0.pre2)
     haml (3.1.2)
     i18n (0.5.0)
     mail (2.2.19)
@@ -84,12 +85,15 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   delayed_job
+  gravatar_image_tag (= 1.0.0.pre2)
   rails (= 3.0.9)
   rails_admin!
   sqlite3
+  will_paginate (= 3.0.pre2)
