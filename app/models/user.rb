@@ -67,6 +67,17 @@ class User < ActiveRecord::Base
     Micropost.from_users_followed_by(self)
   end
   
+  #
+  # Resque specific code here
+  #
+  def self.queue
+    :user_follow
+  end
+  
+  def self.perform(follower_id, followee_id)
+    User.find(follower_id).follow!(User.find(followee_id))
+  end
+  
   private
 
   def encrypt_password
