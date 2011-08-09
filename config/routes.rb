@@ -15,6 +15,6 @@ match '/signout', :to => 'sessions#destroy'
 match '/contact', :to => 'pages#contact'
 match '/about',   :to => 'pages#about'
 match '/help',    :to => 'pages#help'
-
+  mount Resque::Server.new, :at => "/resque"
   root :to => 'pages#home'
 end
